@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Tarneeb.SettingsScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tarneeb"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1200">
+    <Grid>
+        <Grid.Background>
+          <ImageBrush ImageSource="/Images/Table.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+      <Rectangle Name="recColour" Fill="Black" Opacity="0.3" Width="300" HorizontalAlignment="Left">
+      </Rectangle>
+        <StackPanel Width="300" HorizontalAlignment="Left">
+
+          <Label Content="Settings" Foreground="Wheat" FontSize="30">
+            </Label>
+
+            <Button Name="btnDifficulty" Content="Difficulty" Width="150" Height="60" Margin="0,50,0,0" Background="Black" Foreground="Wheat" FontSize="20" Click="btnDifficulty_Click">
+            <Button.Resources>
+              <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15"/>
+              </Style>
+            </Button.Resources>
+          </Button>
+
+          <Button Name="btnChangeName" Content="Change Name" Width="150" Height="60" Margin="0,20,0,0" Background="Black" Foreground="Wheat" FontSize="20" Click="btnChangeName_Click">
+            <Button.Resources>
+              <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15"/>
+              </Style>
+            </Button.Resources>
+          </Button>
+
+          <Button Name="btnStats" Content="Stats" Width="150" Height="60" Margin="0,20,0,0" Background="Black" Foreground="Wheat" FontSize="20" Click="btnStats_Click">
+            <Button.Resources>
+              <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15"/>
+              </Style>
+            </Button.Resources>
+          </Button>
+
+            <Button Name="btnBack" Content="Back" Width="150" Height="60" Margin="0,300,0,0" Background="Black" Foreground="Wheat" FontSize="20" Click="btnBack_Click">
+            <Button.Resources>
+              <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15"/>
+              </Style>
+            </Button.Resources>
+          </Button>
+        </StackPanel>
+
+      <Button Name="btnReset" Content="Reset" Width="150" Height="60" Margin="870,584,0,0" Background="Black" Foreground="Wheat" FontSize="20" Click="btnReset_Click">
+        <Button.Resources>
+          <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="15"/>
+          </Style>
+        </Button.Resources>
+      </Button>
+
+      <StackPanel Width="860" HorizontalAlignment="Right">
+          <Label Content="" Foreground="Wheat" FontSize="30">
+          </Label>
+            <TextBlock Text="Set the difficulty level of the game" Foreground="Wheat" FontSize="30" Margin="0,60,0,0"></TextBlock>
+          <TextBlock Text="Change your display name" Foreground="Wheat" FontSize="30" Margin="0,40,0,0"></TextBlock>
+          <TextBlock Text="Check your statistics" Foreground="Wheat" FontSize="30" Margin="0,40,0,0"></TextBlock>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

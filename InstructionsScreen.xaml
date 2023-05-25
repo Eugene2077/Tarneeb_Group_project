@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Tarneeb.InstructionsScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tarneeb"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1200">
+  <Grid Name="gridTable">
+
+          <Grid.Background>
+            <ImageBrush ImageSource="/Images/Table.jpg" Stretch="UniformToFill"/>
+          </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" Width="950" Height="550">
+            <StackPanel>
+              <TextBlock Name="txtTitle0" FontSize="35" TextWrapping="Wrap" Foreground="Wheat" Text="Tarneeb Rules" TextAlignment="Center" Margin="0,0,0,0"></TextBlock>
+                <TextBlock Name="txtTitle1" FontSize="25" TextWrapping="Wrap" Foreground="Wheat" Text="Players and Cards"></TextBlock>
+                <TextBlock Name="txtRules1" FontSize="20" TextWrapping="Wrap" Foreground="White" Text="There are four players in fixed partnerships, partners facing each other.
+A standard international 52-card pack is used, the cards in each suit ranking from high to low: A-K-Q-J-10-9-8-7-6-5-4-3-2.
+The game is normally played counter-clockwise." Margin="0,0,0,10"></TextBlock>
+                <TextBlock Name="txtTitle2" FontSize="25" TextWrapping="Wrap" Foreground="Wheat" Text="Deal"></TextBlock>
+                <TextBlock Name="txtRules2" FontSize="20" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="White" Text="The first dealer is chosen randomly. After each hand the turn to deal passes to the right.The cards are shuffled and cut, and are all dealt out, one at a time so that everyone has 13 cards."></TextBlock>
+                <TextBlock Name="txtTitle3" FontSize="25" TextWrapping="Wrap" Foreground="Wheat" Text="Bidding"></TextBlock>
+                <TextBlock Name="txtRules3" FontSize="20" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="White" Text="Bidding starts with the player to the dealer's right and moves counterclockwise. The lowest bid is 7 and the highest is 13, and they represent the number of tricks that the bidder's team thinks they can take.
+Players can choose to match the current bid or choose to bid higher. All players must bid and are only allowed to bid once. The highest"></TextBlock>
+                <TextBlock Name="txtTitle4" FontSize="25" TextWrapping="Wrap" Foreground="Wheat" Text="Gameplay"></TextBlock>
+                <TextBlock Name="txtRules4" FontSize="20" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="White" Text="The player who won the bidding (the highest bid or the last player to match the highest bid) leads to the first trick, and thereafter the winner of each trick leads to the next.
+Tarneeb is played counterclockwise. Players must follow suit if able to. Those unable to follow suit may play any card.
+Each trick is won by the highest trump in it, or by the highest card of the suit led if it contains no trumps."></TextBlock>
+                <TextBlock Name="txtTitle5" FontSize="25" TextWrapping="Wrap" Foreground="Wheat" Text="Scoring"></TextBlock>
+                <TextBlock Name="txtRules5" FontSize="20" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="White" Text="The bidder's team tries to take as many tricks as they can or at least as many tricks as they bid.
+If their bid is less than 13 and succeed, they score the number of tricks they won, and the other team scores nothing. If the bidding team takes fewer tricks than they bid, they lose the amount of their bid.
+Winning all 13 tricks is called Kaboot. Kaboot brings a bonus of 3 points, so 16 points in total instead of 13. If they lose any tricks, they score minus 16 and the other team scores double the number the tricks that they win.
+Further hands are played until one team achieves a cumulative score of 31 points or more, and wins the game."></TextBlock>
+              <Button Name="btnBack" Content="Back" Width="150" Height="60" Margin="0,0,0,0" Background="Black" Foreground="Wheat" FontSize="20" ToolTip="Back to Home" Click="btnBack_Click">
+                <Button.Resources>
+                  <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                  </Style>
+                </Button.Resources>
+              </Button>
+              <Button Name="btnStartGame" Content="Start Game" Width="150" Height="60" Margin="0,20,0,0" Background="Black" Foreground="Wheat" FontSize="20" ToolTip="Play against AI" Click="btnStartGame_Click" >
+                <Button.Resources>
+                  <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                  </Style>
+                </Button.Resources>
+              </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

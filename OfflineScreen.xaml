@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="Tarneeb.OfflineScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tarneeb"
+             mc:Ignorable="d"
+             x:Name="offlineScreen"
+             x:FieldModifier="public"
+             d:DesignHeight="750" d:DesignWidth="1200">
+
+  <Grid Name="gridTable">
+
+      <Grid.Background>
+        <ImageBrush ImageSource="/Images/Table.jpg" Stretch="UniformToFill"/>
+      </Grid.Background>
+
+      <Button Name="btnLeaveMatch" Content="Leave Match" Width="130" Height="40" VerticalAlignment="Bottom" 
+              HorizontalAlignment="Left" Background="Black" Foreground="Wheat" FontSize="20" 
+              ToolTip="Exit the game and go back to home screen" Click="btnLeaveMatch_Click" Margin="10,0,0,10">
+        <Button.Resources>
+          <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="15"/>
+          </Style>
+        </Button.Resources>
+      </Button>
+      <Rectangle Fill="Black" HorizontalAlignment="Left" Height="150" Margin="910,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="260" Opacity="0.5"/>
+        <StackPanel HorizontalAlignment="Left" Height="155" Margin="910,20,0,0" VerticalAlignment="Top" Width="130">
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,2,0,2" >
+                <TextBlock Name="txtTeam1" Text="Team 1" Margin="5,0,0,0" FontSize="20" Foreground="Wheat"></TextBlock>
+            </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,0,0,0" >
+                <TextBlock Name="txtScorePlayer1" Margin="5,0,0,0" Text="Player One" FontSize="15" Foreground="LightBlue"></TextBlock>
+            </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,0,0,0" >
+                <TextBlock Name="txtScorePlayer3" Text="Player Three" Margin="5,0,0,5" FontSize="15" Foreground="LightBlue"></TextBlock>
+            </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,2,0,2" >
+                <TextBlock Name="txtTeam2" Text="Team 2" Margin="5,0,0,0" FontSize="20" Foreground="Wheat"></TextBlock>
+          </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,0,0,0" >
+                <TextBlock Name="txtScorePlayer2" Margin="5,0,0,0" Text="Player Two" FontSize="15" Foreground="OrangeRed"></TextBlock>
+            </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,0,0,2" >
+                <TextBlock Name="txtScorePlayer4" Text="Player Four" Margin="5,0,0,5" FontSize="15" Foreground="OrangeRed"></TextBlock>
+            </Border>
+        </StackPanel>
+      <StackPanel HorizontalAlignment="Left" Height="155" Margin="1040,20,0,0" VerticalAlignment="Top" Width="130">
+        <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="0,2,2,2" >
+                <TextBlock Name="txtScore1" Margin="0,0,5,0" Text="0" FontSize="20" Foreground="Wheat" TextAlignment="Right"></TextBlock>
+            </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="0,0,2,0" >
+                <TextBlock FontSize="15"></TextBlock>
+            </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="0,0,2,0" >
+                <TextBlock FontSize="15" Margin="0,0,0,5"></TextBlock>
+            </Border>
+            <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="0,2,2,2" >
+                        <TextBlock Name="txtScore2" Text="0" Margin="0,0,5,0" FontSize="20" Foreground="Wheat" TextAlignment="Right"></TextBlock>
+        </Border>
+        <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="0,0,2,0" >
+          <TextBlock FontSize="15" Foreground="Wheat" TextAlignment="Right"></TextBlock>
+        </Border>
+        <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="0,0,2,2" >
+          <TextBlock FontSize="15" Margin="0,0,0,5" Foreground="Wheat" TextAlignment="Right"></TextBlock>
+        </Border>
+        </StackPanel>
+
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="100" Margin="20,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="260" Opacity="0.5"/>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="20,20,0,0" VerticalAlignment="Top" Width="130">
+          <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,2,2,2" >
+            <TextBlock Text="The Bid" Margin="0,0,0,0" FontSize="20" Foreground="Wheat" TextAlignment="Center" TextDecorations=""></TextBlock>
+          </Border>
+          <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,0,2,2" >
+            <TextBlock x:Name="txtTheBid" Margin="0,0,0,0" TextAlignment="Center" Text="" FontSize="15" Foreground="White" x:FieldModifier="public"></TextBlock>
+          </Border>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="150,20,0,0" VerticalAlignment="Top" Width="130">
+          <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,2,2,2" >
+            <TextBlock Text="Trump" Margin="0,0,0,0" FontSize="20" Foreground="Wheat" TextAlignment="Center" TextDecorations=""></TextBlock>
+          </Border>
+          <Border Margin="0,0,0,0" BorderBrush="Wheat" BorderThickness="2,0,2,2" >
+            <TextBlock x:Name="txtTrump" Margin="0,0,0,0" TextAlignment="Center" Text="" FontSize="15" Foreground="White" x:FieldModifier="public"></TextBlock>
+          </Border>
+        </StackPanel>
+        <TextBlock Name="txtTurn" Text="Current Turn:" Foreground="Wheat" FontSize="20" Margin="25,80,1000,600">
+        </TextBlock>
+      <TextBlock Name="txtCurrent" Text="" Foreground="LightBlue" FontSize="20" Margin="155,80,900,600">
+      </TextBlock>
+        <Label Name="lblPlayerOne" Content="Player One" VerticalAlignment="Bottom" Foreground="LightBlue" FontSize="20" HorizontalAlignment="Center">
+        </Label>
+      <Label Name="lblPlayerTwo" Content="Player Two" VerticalAlignment="Center" Foreground="Red" FontSize="20" HorizontalAlignment="Right" Margin="0,0,90,160">
+      </Label>
+      <Label Name="lblPlayerThree" Content="Player Three" VerticalAlignment="Top" Foreground="LightBlue" FontSize="20" HorizontalAlignment="Center">
+      </Label>
+        <Label Name="lblPlayerFour" Content="Player Four" VerticalAlignment="Center" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="90,0,0,160">
+        </Label>
+        <Label Name="lblBidding2" Content="Bidding..." VerticalAlignment="Center" Foreground="Red" FontSize="20" HorizontalAlignment="Right" Margin="0,0,90,-160" Visibility="Collapsed">
+      </Label>
+      <Label Name="lblBidding4" Content="Bidding..." VerticalAlignment="Center" Foreground="Red" FontSize="20" HorizontalAlignment="Left" Margin="100,0,0,-160" Visibility="Collapsed">
+      </Label>
+      <Label Name="lblTrick1" Content="Team 1 Tricks:" VerticalAlignment="Center" Foreground="LightBlue" FontSize="15" HorizontalAlignment="Left" Margin="10,0,0,-400">
+      </Label>
+      <Label Name="lblTrick2" Content="Team 2 Tricks:" VerticalAlignment="Center" Foreground="Red" FontSize="15" HorizontalAlignment="Left" Margin="10,0,0,-500">
+      </Label>
+      <Label Name="lblT1" Content="" VerticalAlignment="Center" Foreground="LightBlue" FontSize="15" HorizontalAlignment="Left" Margin="110,0,0,-400">
+      </Label>
+      <Label Name="lblT2" Content="" VerticalAlignment="Center" Foreground="Red" FontSize="15" HorizontalAlignment="Left" Margin="110,0,0,-500">
+      </Label>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Tarneeb.GameOverScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tarneeb"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1200">
+    <Grid>
+        <Grid.Background>
+          <ImageBrush ImageSource="/Images/Table.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Rectangle Name="recColour" Fill="Blue" Opacity="0.3">
+        </Rectangle>
+
+      <TextBlock Name="txtWinnerIs" Text="WINNER IS:" Foreground="Wheat" FontSize="80" Margin="200, 100, 560, 340">
+      </TextBlock>
+      <TextBlock Name="txtWinner" Text="" Foreground="Wheat" FontSize="80" Margin="630, 100, 150, 340">
+      </TextBlock>
+        <Label Name="lblTeam1" Content="Team One Score:" Foreground="Wheat" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,100,200">
+        </Label>
+      <Label Name="lblTeam2" Content="Team Two Score:" Foreground="Wheat" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,100,80">
+      </Label>
+      <Label Name="lblScore1" Content="" Foreground="Wheat" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,-300,200">
+      </Label>
+      <Label Name="lblScore2" Content="" Foreground="Wheat" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,-300,80">
+      </Label>
+
+        <Button Name="btnMainMenu" Content="Main Menu" Width="150" Height="60" Margin="0,150,0,0" Background="Black" Foreground="Wheat" FontSize="20" ToolTip="Back to home" Click="btnMainMenu_Click">
+        <Button.Resources>
+          <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="15"/>
+          </Style>
+        </Button.Resources>
+      </Button>
+
+      <Button Name="btnReplay" Content="Replay" Width="150" Height="60" Margin="0,350,0,0" Background="Black" Foreground="Wheat" FontSize="20" ToolTip="Play again" Click="btnReplay_Click">
+        <Button.Resources>
+          <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="15"/>
+          </Style>
+        </Button.Resources>
+      </Button>
+
+      
+    </Grid>
+</UserControl>

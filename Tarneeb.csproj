@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11AEEE2E-AD89-4329-95A8-8DEDB03A744F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tarneeb</RootNamespace>
+    <AssemblyName>Tarneeb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Difficulty.xaml.cs">
+      <DependentUpon>Difficulty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameOverScreen.xaml.cs">
+      <DependentUpon>GameOverScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoggingAndStats.cs" />
+    <Compile Include="SettingsScreen.xaml.cs">
+      <DependentUpon>SettingsScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sound.cs" />
+    <Compile Include="StatsScreen.xaml.cs">
+      <DependentUpon>StatsScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Trump.xaml.cs">
+      <DependentUpon>Trump.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserName.xaml.cs">
+      <DependentUpon>UserName.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Bidding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Difficulty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameOverScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InstructionsScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bidding.xaml.cs">
+      <DependentUpon>Bidding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Card.cs" />
+    <Compile Include="Deck.cs" />
+    <Compile Include="Hand.cs" />
+    <Compile Include="HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InstructionsScreen.xaml.cs">
+      <DependentUpon>InstructionsScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="OfflineScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StatsScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Trump.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ObjectAnimation.cs" />
+    <Compile Include="OfflineScreen.xaml.cs">
+      <DependentUpon>OfflineScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CardsPNG\0C.png" />
+    <Resource Include="Images\CardsPNG\0D.png" />
+    <Resource Include="Images\CardsPNG\0H.png" />
+    <Resource Include="Images\CardsPNG\0S.png" />
+    <Resource Include="Images\CardsPNG\2C.png" />
+    <Resource Include="Images\CardsPNG\2D.png" />
+    <Resource Include="Images\CardsPNG\2H.png" />
+    <Resource Include="Images\CardsPNG\2S.png" />
+    <Resource Include="Images\CardsPNG\3C.png" />
+    <Resource Include="Images\CardsPNG\3D.png" />
+    <Resource Include="Images\CardsPNG\3H.png" />
+    <Resource Include="Images\CardsPNG\3S.png" />
+    <Resource Include="Images\CardsPNG\4C.png" />
+    <Resource Include="Images\CardsPNG\4D.png" />
+    <Resource Include="Images\CardsPNG\4H.png" />
+    <Resource Include="Images\CardsPNG\4S.png" />
+    <Resource Include="Images\CardsPNG\5C.png" />
+    <Resource Include="Images\CardsPNG\5D.png" />
+    <Resource Include="Images\CardsPNG\5H.png" />
+    <Resource Include="Images\CardsPNG\5S.png" />
+    <Resource Include="Images\CardsPNG\6C.png" />
+    <Resource Include="Images\CardsPNG\6D.png" />
+    <Resource Include="Images\CardsPNG\6H.png" />
+    <Resource Include="Images\CardsPNG\6S.png" />
+    <Resource Include="Images\CardsPNG\7C.png" />
+    <Resource Include="Images\CardsPNG\7D.png" />
+    <Resource Include="Images\CardsPNG\7H.png" />
+    <Resource Include="Images\CardsPNG\7S.png" />
+    <Resource Include="Images\CardsPNG\8C.png" />
+    <Resource Include="Images\CardsPNG\8D.png" />
+    <Resource Include="Images\CardsPNG\8H.png" />
+    <Resource Include="Images\CardsPNG\8S.png" />
+    <Resource Include="Images\CardsPNG\9C.png" />
+    <Resource Include="Images\CardsPNG\9D.png" />
+    <Resource Include="Images\CardsPNG\9H.png" />
+    <Resource Include="Images\CardsPNG\9S.png" />
+    <Resource Include="Images\CardsPNG\AC.png" />
+    <Resource Include="Images\CardsPNG\aces.png" />
+    <Resource Include="Images\CardsPNG\AD.png" />
+    <Resource Include="Images\CardsPNG\AH.png" />
+    <Resource Include="Images\CardsPNG\AS.png" />
+    <Resource Include="Images\CardsPNG\honors_spade-14.png" />
+    <Resource Include="Images\CardsPNG\honor_clubs.png" />
+    <Resource Include="Images\CardsPNG\honor_diamond.png" />
+    <Resource Include="Images\CardsPNG\honor_heart-14.png" />
+    <Resource Include="Images\CardsPNG\JC.png" />
+    <Resource Include="Images\CardsPNG\JD.png" />
+    <Resource Include="Images\CardsPNG\JH.png" />
+    <Resource Include="Images\CardsPNG\JS.png" />
+    <Resource Include="Images\CardsPNG\KC.png" />
+    <Resource Include="Images\CardsPNG\KD.png" />
+    <Resource Include="Images\CardsPNG\KH.png" />
+    <Resource Include="Images\CardsPNG\KS.png" />
+    <Resource Include="Images\CardsPNG\QC.png" />
+    <Resource Include="Images\CardsPNG\QD.png" />
+    <Resource Include="Images\CardsPNG\QH.png" />
+    <Resource Include="Images\CardsPNG\QS.png" />
+    <Resource Include="Images\CardsPNG\red_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TarneebTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\button_click.wav" />
+    <Content Include="Sounds\card_click.wav" />
+    <Content Include="Sounds\card_swipe.wav" />
+    <Content Include="TarneebLog.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TarneebLog_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>TarneebLog.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
